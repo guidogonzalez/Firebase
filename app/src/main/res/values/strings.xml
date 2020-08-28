@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Firebase</string>
 
+    <string name="titulo_nombre">Name:</string>
+    <string name="titulo_url_imagen">Image URL:</string>
+    <string name="titulo_aceptar">Accept</string>
+
+    <string name="titulo_lista">Characters List</string>
+    <string name="titulo_personaje">Character</string>
 </resources>
