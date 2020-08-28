@@ -1,7 +1,7 @@
 package es.widoapps.firebase.adaptador;
 
+import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -16,14 +16,17 @@ import java.util.List;
 import es.widoapps.firebase.R;
 import es.widoapps.firebase.databinding.ItemPersonajeBinding;
 import es.widoapps.firebase.modelo.Personaje;
+import es.widoapps.firebase.repositorio.RepoPersonaje;
 
 public class ListaAdaptador extends RecyclerView.Adapter<ListaAdaptador.PersonajeViewHolder> {
 
     private ArrayList<Personaje> listaPersonajes;
+    private Context context;
 
-    public ListaAdaptador(ArrayList<Personaje> listaPersonajes) {
+    public ListaAdaptador(Context context, ArrayList<Personaje> personajes) {
 
-        this.listaPersonajes = listaPersonajes;
+        this.context = context;
+        this.listaPersonajes = personajes;
     }
 
     public void actualizarLista(List<Personaje> nuevaLista) {
@@ -59,7 +62,10 @@ public class ListaAdaptador extends RecyclerView.Adapter<ListaAdaptador.Personaj
 
         holder.itemView.ibBorrar.setOnClickListener(v -> {
 
-            Log.d("BORRAR", "borrar");
+            RepoPersonaje.getInstance().borrarPersonaje(context, listaPersonajes.get(position).id);
+            listaPersonajes.remove(position);
+            notifyItemRemoved(position);
+            notifyItemRangeChanged(position, listaPersonajes.size());
         });
     }
 

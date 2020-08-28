@@ -26,7 +26,7 @@ public class ListaFragment extends Fragment {
 
     private View view;
     private ListaViewModel listaViewModel;
-    private ListaAdaptador listaAdaptador = new ListaAdaptador(new ArrayList<>());
+    private ListaAdaptador listaAdaptador;
     private SwipeRefreshLayout refreshLayout;
     private RecyclerView rvLista;
     private FloatingActionButton fabAgregar;
@@ -49,6 +49,8 @@ public class ListaFragment extends Fragment {
         listaViewModel = ViewModelProviders.of(this).get(ListaViewModel.class);
         listaViewModel.cargarPersonajesRemoto();
 
+        listaAdaptador = new ListaAdaptador(getContext(), new ArrayList<>());
+
         rvLista.setLayoutManager(new LinearLayoutManager(getContext()));
         rvLista.setAdapter(listaAdaptador);
 
@@ -56,9 +58,7 @@ public class ListaFragment extends Fragment {
 
         fabAgregar.setOnClickListener(v -> {
 
-            ListaFragmentDirections.ActionListaFragmentToAgregarFragment accion = ListaFragmentDirections.actionListaFragmentToAgregarFragment(null);
-
-            Navigation.findNavController(v).navigate(accion);
+            Navigation.findNavController(v).navigate(R.id.action_ListaFragment_to_AgregarFragment);
         });
     }
 

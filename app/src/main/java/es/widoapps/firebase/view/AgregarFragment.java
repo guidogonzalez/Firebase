@@ -1,6 +1,7 @@
 package es.widoapps.firebase.view;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,10 +11,12 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.Navigation;
 
 import es.widoapps.firebase.R;
 import es.widoapps.firebase.modelo.Personaje;
+import es.widoapps.firebase.viewmodel.AgregarViewModel;
 
 public class AgregarFragment extends Fragment implements View.OnClickListener {
 
@@ -24,6 +27,8 @@ public class AgregarFragment extends Fragment implements View.OnClickListener {
 
     private Personaje personaje;
     private String idPersonaje;
+
+    private AgregarViewModel agregarViewModel;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -48,26 +53,35 @@ public class AgregarFragment extends Fragment implements View.OnClickListener {
 
             etNombre.setText(personaje.nombre);
             etUrlImagen.setText(personaje.urlImagen);
+        }
+
+        agregarViewModel = ViewModelProviders.of(this).get(AgregarViewModel.class);
+    }
+
+    public void editarPersonaje() {
+
+        String nombre = etNombre.getText().toString();
+        String urlImagen = etUrlImagen.getText().toString();
+
+        Personaje personaje = new Personaje(nombre, urlImagen);
+        personaje.setId(idPersonaje);
+
+        agregarViewModel.editarPersonaje(getContext(), personaje, idPersonaje);
+    }
+
+    public void agregarPersonaje() {
+
+        String nombre = etNombre.getText().toString();
+        String urlImagen = etUrlImagen.getText().toString();
+
+        if (!TextUtils.isEmpty(nombre) && !TextUtils.isEmpty(urlImagen)) {
+
+            agregarViewModel.agregarPersonaje(getContext(), nombre, urlImagen);
 
         } else {
 
+            Toast.makeText(getContext(), "Debes de rellenar los campos.", Toast.LENGTH_SHORT).show();
         }
-    }
-
-    public void editarPersonaje(String id) {
-
-        String nombre = etNombre.getText().toString();
-        String urlImagen = etUrlImagen.getText().toString();
-
-        Personaje personaje = new Personaje(nombre, urlImagen);
-    }
-
-    public void guardarPersonaje() {
-
-        String nombre = etNombre.getText().toString();
-        String urlImagen = etUrlImagen.getText().toString();
-
-        Personaje personaje = new Personaje(nombre, urlImagen);
     }
 
     @Override
@@ -75,11 +89,11 @@ public class AgregarFragment extends Fragment implements View.OnClickListener {
 
         if (getArguments() != null) {
 
-            Toast.makeText(getContext(), "Editado correctamente.", Toast.LENGTH_SHORT).show();
+            editarPersonaje();
 
         } else {
 
-            Toast.makeText(getContext(), "Guardado correctamente.", Toast.LENGTH_SHORT).show();
+            agregarPersonaje();
         }
 
         Navigation.findNavController(v).navigate(R.id.action_AgregarFragment_to_ListaFragment);

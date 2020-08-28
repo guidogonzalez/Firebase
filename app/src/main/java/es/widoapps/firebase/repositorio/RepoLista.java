@@ -1,6 +1,8 @@
 package es.widoapps.firebase.repositorio;
 
+import android.content.Context;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.lifecycle.MutableLiveData;
 
@@ -15,8 +17,8 @@ import es.widoapps.firebase.modelo.Personaje;
 public class RepoLista {
 
     public static RepoLista instancia;
-    private List<Personaje> listaPersonajes = new ArrayList<>();
-    private MutableLiveData<List<Personaje>> personajes = new MutableLiveData<>();
+    private ArrayList<Personaje> listaPersonajes = new ArrayList<>();
+    private MutableLiveData<ArrayList<Personaje>> personajes = new MutableLiveData<>();
     private FirebaseFirestore bd = FirebaseFirestore.getInstance();
 
     public static RepoLista getInstance() {
@@ -28,7 +30,9 @@ public class RepoLista {
         return instancia;
     }
 
-    public MutableLiveData<List<Personaje>> getPersonajes() {
+    public MutableLiveData<ArrayList<Personaje>> getPersonajes(Context context) {
+
+        listaPersonajes.clear();
 
         bd.collection("dragonball")
                 .get()
@@ -49,8 +53,14 @@ public class RepoLista {
                         }
 
                         personajes.setValue(listaPersonajes);
+
+                        Toast.makeText(context, "Lista cargada correctamente.", Toast.LENGTH_SHORT).show();
                     }
 
+                })
+                .addOnFailureListener(e -> {
+
+                    Toast.makeText(context, "No se ha podido cargar.", Toast.LENGTH_SHORT).show();
                 });
 
         return personajes;
