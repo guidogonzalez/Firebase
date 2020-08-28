@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/ListaFragment"
         android:name="es.widoapps.firebase.view.ListaFragment"
-        android:label="@string/first_fragment_label"
+        android:label="Lista"
         tools:layout="@layout/fragment_lista">
         <action
             android:id="@+id/action_ListaFragment_to_AgregarFragment"
@@ -17,7 +17,7 @@
     <fragment
         android:id="@+id/AgregarFragment"
         android:name="es.widoapps.firebase.view.AgregarFragment"
-        android:label="@string/second_fragment_label"
+        android:label="Agregar"
         tools:layout="@layout/fragment_agregar">
         <action
             android:id="@+id/action_AgregarFragment_to_ListaFragment"
