@@ -1,6 +1,8 @@
 package es.widoapps.firebase.modelo;
 
-public class Personaje {
+import java.io.Serializable;
+
+public class Personaje implements Serializable {
 
     public String id;
     public String nombre;

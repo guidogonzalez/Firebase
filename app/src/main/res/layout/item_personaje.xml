@@ -10,6 +10,10 @@
             name="personaje"
             type="es.widoapps.firebase.modelo.Personaje" />
 
+        <variable
+            name="listener"
+            type="es.widoapps.firebase.util.PersonajeClickListener" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -69,12 +73,21 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/ivImagen" />
 
-                <ImageView
-                    android:id="@+id/ivBorrar"
+                <ImageButton
+                    android:id="@+id/ibEditar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/ibBorrar"
+                    app:layout_constraintEnd_toStartOf="@+id/ibBorrar"
+                    app:layout_constraintTop_toTopOf="@+id/ibBorrar"
+                    app:srcCompat="@android:drawable/ic_menu_edit" />
+
+                <ImageButton
+                    android:id="@+id/ibBorrar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_marginBottom="8dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"

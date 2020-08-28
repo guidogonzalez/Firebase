@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -52,6 +53,13 @@ public class ListaFragment extends Fragment {
         rvLista.setAdapter(listaAdaptador);
 
         observarViewModel();
+
+        fabAgregar.setOnClickListener(v -> {
+
+            ListaFragmentDirections.ActionListaFragmentToAgregarFragment accion = ListaFragmentDirections.actionListaFragmentToAgregarFragment(null);
+
+            Navigation.findNavController(v).navigate(accion);
+        });
     }
 
     private void observarViewModel() {
