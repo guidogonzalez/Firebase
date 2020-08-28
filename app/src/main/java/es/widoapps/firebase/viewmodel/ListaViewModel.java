@@ -13,7 +13,7 @@ import es.widoapps.firebase.repositorio.Repositorio;
 
 public class ListaViewModel extends AndroidViewModel {
 
-    private MutableLiveData<List<Personaje>> listaPersonajes = new MutableLiveData<>();
+    public MutableLiveData<List<Personaje>> listaPersonajes = new MutableLiveData<>();
 
     public ListaViewModel(@NonNull Application application) {
         super(application);
