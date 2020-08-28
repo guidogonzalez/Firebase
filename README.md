@@ -17,7 +17,7 @@ Clonar el proyecto, añadir App a servidor de Firebase y añadir el archivo goog
 
 <img src="/imagenes/imagen2.png" align="right" width="32%"/>
 
-
+</br></br>
 
 ## Tecnologías & librerías
 
@@ -33,13 +33,15 @@ Clonar el proyecto, añadir App a servidor de Firebase y añadir el archivo goog
 - [Glide](https://github.com/bumptech/glide) - cargar imagenes.
 - [Material-Components](https://github.com/material-components/material-components-android) - Componentes de Material design como Card Views
 
-
+</br></br>
 
 ## Patrón de diseño
 
 La aplicación está basada en el patrón de diseño MVVM con repositorio.
 
 ![arquitectura](https://betabeers.com/uploads/blog/20190307_imagen_2.png)
+
+</br></br>
 
 # Licencia
 ```xml
