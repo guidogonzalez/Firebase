@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "550822883320",
+    "firebase_url": "https://fir-crud-812c7.firebaseio.com",
+    "project_id": "fir-crud-812c7",
+    "storage_bucket": "fir-crud-812c7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550822883320:android:4578dc6dba66c114d1300d",
+        "android_client_info": {
+          "package_name": "es.widoapps.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "550822883320-ql7i5sfl21mj5e7f9l3aoicc1siubuda.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUfpT82Fde_DEiHl_jNHMnoNCij1Nr8lo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "550822883320-ql7i5sfl21mj5e7f9l3aoicc1siubuda.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550822883320:android:9ebbe1039ee04841d1300d",
+        "android_client_info": {
+          "package_name": "es.widoapps.firebasecrud"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "550822883320-tapnov3dt8eplj9ahmvi62v2ktv87lap.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "es.widoapps.firebasecrud",
+            "certificate_hash": "3aa215780ee3747107ac4cd08a20a0e8ae40ee97"
+          }
+        },
+        {
+          "client_id": "550822883320-ql7i5sfl21mj5e7f9l3aoicc1siubuda.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUfpT82Fde_DEiHl_jNHMnoNCij1Nr8lo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "550822883320-ql7i5sfl21mj5e7f9l3aoicc1siubuda.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
