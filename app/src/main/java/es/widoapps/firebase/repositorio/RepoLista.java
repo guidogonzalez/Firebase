@@ -12,17 +12,17 @@ import java.util.List;
 
 import es.widoapps.firebase.modelo.Personaje;
 
-public class Repositorio {
+public class RepoLista {
 
-    public static Repositorio instancia;
+    public static RepoLista instancia;
     private List<Personaje> listaPersonajes = new ArrayList<>();
     private MutableLiveData<List<Personaje>> personajes = new MutableLiveData<>();
     private FirebaseFirestore bd = FirebaseFirestore.getInstance();
 
-    public static Repositorio getInstance() {
+    public static RepoLista getInstance() {
 
         if (instancia == null) {
-            instancia = new Repositorio();
+            instancia = new RepoLista();
         }
 
         return instancia;

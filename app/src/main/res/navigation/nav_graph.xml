@@ -22,5 +22,9 @@
         <action
             android:id="@+id/action_AgregarFragment_to_ListaFragment"
             app:destination="@id/ListaFragment" />
+        <argument
+            android:name="id"
+            app:argType="string"
+            app:nullable="true" />
     </fragment>
 </navigation>

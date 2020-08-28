@@ -9,7 +9,7 @@ import androidx.lifecycle.MutableLiveData;
 import java.util.List;
 
 import es.widoapps.firebase.modelo.Personaje;
-import es.widoapps.firebase.repositorio.Repositorio;
+import es.widoapps.firebase.repositorio.RepoLista;
 
 public class ListaViewModel extends AndroidViewModel {
 
@@ -21,6 +21,6 @@ public class ListaViewModel extends AndroidViewModel {
 
     public void cargarPersonajesRemoto() {
 
-        listaPersonajes = Repositorio.getInstance().getPersonajes();
+        listaPersonajes = RepoLista.getInstance().getPersonajes();
     }
 }
