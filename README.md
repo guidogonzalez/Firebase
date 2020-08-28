@@ -9,7 +9,7 @@ Firebase es una aplicación de demostración centrada en un simple CRUD a travé
 <img src="/imagenes/imagen1.png" width="32%"/>
 </p>
 
-
+</br></br>
 
 ## Descargar
 
