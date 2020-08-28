@@ -80,7 +80,7 @@ public class AgregarFragment extends Fragment implements View.OnClickListener {
 
         } else {
 
-            Toast.makeText(getContext(), "Debes de rellenar los campos.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), getContext().getString(R.string.mensaje_rellenar), Toast.LENGTH_SHORT).show();
         }
     }
 

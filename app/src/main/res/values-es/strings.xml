@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Firebase</string>
+
+    <string name="titulo_nombre">Nombre:</string>
+    <string name="titulo_url_imagen">URL Imagen:</string>
+    <string name="titulo_aceptar">Aceptar</string>
+
+    <string name="titulo_lista">Lista Personajes</string>
+    <string name="titulo_personaje">Personaje</string>
+
+    <string name="mensaje_editar">Editado correctamente.</string>
+    <string name="mensaje_error_editar">Ha ocurrido un error editando.</string>
+    <string name="mensaje_agregar">Agregado correctamente..</string>
+    <string name="mensaje_error_agregar">Ha ocurrido un error agregando.</string>
+    <string name="mensaje_borrar">Borrado correctamente.</string>
+    <string name="mensaje_error_borrar">Ha ocurrido un error borrando.</string>
+
+    <string name="mensaje_cargar">Lista cargada correctamente.</string>
+    <string name="mensaje_error_cargar">Ha ocurrido un error cargando lista.</string>
+    <string name="mensaje_rellenar">Rellenar campos obligatorios.</string>
+</resources>

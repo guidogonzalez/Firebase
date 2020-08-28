@@ -3,10 +3,6 @@ package es.widoapps.firebase.repositorio;
 import android.content.Context;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.SetOptions;
@@ -14,6 +10,7 @@ import com.google.firebase.firestore.SetOptions;
 import java.util.HashMap;
 import java.util.Map;
 
+import es.widoapps.firebase.R;
 import es.widoapps.firebase.modelo.Personaje;
 
 public class RepoPersonaje {
@@ -37,12 +34,12 @@ public class RepoPersonaje {
                 .set(personaje, SetOptions.merge())
                 .addOnSuccessListener(documentReference -> {
 
-                    Toast.makeText(context, "Actualizado correctamente.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, context.getString(R.string.mensaje_editar), Toast.LENGTH_SHORT).show();
 
                 })
                 .addOnFailureListener(e -> {
 
-                    Toast.makeText(context, "No se ha podido actualizar.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, context.getString(R.string.mensaje_error_editar), Toast.LENGTH_SHORT).show();
                 });
     }
 
@@ -59,12 +56,12 @@ public class RepoPersonaje {
         ref.set(datos)
                 .addOnSuccessListener(aVoid -> {
 
-                    Toast.makeText(context, "Agregar correctamente.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, context.getString(R.string.mensaje_agregar), Toast.LENGTH_SHORT).show();
 
                 })
                 .addOnFailureListener(e -> {
 
-                    Toast.makeText(context, "No se ha podido añadir.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, context.getString(R.string.mensaje_error_agregar), Toast.LENGTH_SHORT).show();
                 });
     }
 
@@ -75,12 +72,12 @@ public class RepoPersonaje {
                 .delete()
                 .addOnSuccessListener(aVoid -> {
 
-                    Toast.makeText(context, "Borrado con éxito.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, context.getString(R.string.mensaje_borrar), Toast.LENGTH_SHORT).show();
 
                 })
                 .addOnFailureListener(e -> {
 
-                    Toast.makeText(context, "No se ha podido borrar.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, context.getString(R.string.mensaje_error_borrar), Toast.LENGTH_SHORT).show();
                 });
     }
 }

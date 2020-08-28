@@ -61,7 +61,7 @@
         android:id="@+id/bAceptar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/holo_green_light"
+        android:backgroundTint="@color/colorPrimary"
         android:text="@string/titulo_aceptar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

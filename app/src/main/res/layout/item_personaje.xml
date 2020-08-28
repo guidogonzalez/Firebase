@@ -44,9 +44,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@{personaje.id}"
+                    android:visibility="gone"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:visibility="gone" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:id="@+id/ivImagen"
@@ -61,13 +61,15 @@
 
                 <TextView
                     android:id="@+id/tvNombre"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="2dp"
+                    android:layout_height="13dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginBottom="8dp"
-                    android:text="@{personaje.nombre}"
+                    android:text="@{personaje.nombre.toUpperCase()}"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -77,11 +79,11 @@
                     android:id="@+id/ibEditar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
                     android:background="@null"
-                    app:layout_constraintBottom_toBottomOf="@+id/ibBorrar"
-                    app:layout_constraintEnd_toStartOf="@+id/ibBorrar"
-                    app:layout_constraintTop_toTopOf="@+id/ibBorrar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@android:drawable/ic_menu_edit" />
 
                 <ImageButton
@@ -89,12 +91,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="8dp"
                     android:background="@null"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/ivImagen"
+                    app:layout_constraintEnd_toEndOf="@+id/ibEditar"
+                    app:layout_constraintTop_toBottomOf="@+id/ibEditar"
                     app:srcCompat="@android:drawable/ic_menu_delete" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>

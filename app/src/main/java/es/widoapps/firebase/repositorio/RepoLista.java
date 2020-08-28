@@ -12,6 +12,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.ArrayList;
 import java.util.List;
 
+import es.widoapps.firebase.R;
 import es.widoapps.firebase.modelo.Personaje;
 
 public class RepoLista {
@@ -54,13 +55,13 @@ public class RepoLista {
 
                         personajes.setValue(listaPersonajes);
 
-                        Toast.makeText(context, "Lista cargada correctamente.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, context.getString(R.string.mensaje_cargar), Toast.LENGTH_SHORT).show();
                     }
 
                 })
                 .addOnFailureListener(e -> {
 
-                    Toast.makeText(context, "No se ha podido cargar.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, context.getString(R.string.mensaje_error_cargar), Toast.LENGTH_SHORT).show();
                 });
 
         return personajes;

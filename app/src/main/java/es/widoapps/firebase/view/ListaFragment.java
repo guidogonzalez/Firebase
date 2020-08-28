@@ -54,6 +54,13 @@ public class ListaFragment extends Fragment {
         rvLista.setLayoutManager(new LinearLayoutManager(getContext()));
         rvLista.setAdapter(listaAdaptador);
 
+        refreshLayout.setOnRefreshListener(() -> {
+            rvLista.setVisibility(View.GONE);
+            listaViewModel.cargarPersonajesRemoto();
+            rvLista.setVisibility(View.VISIBLE);
+            refreshLayout.setRefreshing(false);
+        });
+
         observarViewModel();
 
         fabAgregar.setOnClickListener(v -> {
