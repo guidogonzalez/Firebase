@@ -9,11 +9,15 @@ Firebase es una aplicación de demostración centrada en un simple CRUD a travé
 <img src="/imagenes/imagen1.png" width="32%"/>
 </p>
 
+
+
 ## Descargar
 
 Clonar el proyecto, añadir App a servidor de Firebase y añadir el archivo google-services.json al proyecto.
 
 <img src="/imagenes/imagen2.png" align="right" width="32%"/>
+
+
 
 ## Tecnologías & librerías
 
@@ -25,9 +29,11 @@ Clonar el proyecto, añadir App a servidor de Firebase y añadir el archivo goog
   - ViewModel - posee los datos relacionados con la UI.
 - Patrón de diseño
   - MVVM (Modelo - Vista - VistaModelo)
-- [Firebase Firestore](https://firebase.google.com/docs/firestore) - construir el API REST
+- [Firebase Firestore](https://firebase.google.com/docs/firestore) - base de datos no relacional en la nube a tiempo real
 - [Glide](https://github.com/bumptech/glide) - cargar imagenes.
 - [Material-Components](https://github.com/material-components/material-components-android) - Componentes de Material design como Card Views
+
+
 
 ## Patrón de diseño
 
