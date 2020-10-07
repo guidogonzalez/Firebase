@@ -42,10 +42,3 @@ La aplicación está basada en el patrón de diseño MVVM con repositorio.
 ![arquitectura](https://betabeers.com/uploads/blog/20190307_imagen_2.png)
 
 </br></br>
-
-# Licencia
-```xml
-Diseñado y desarrollado por Guido González
-
-Totalmente libre de uso, en caso de uso comercial otorgar créditos.
-```
